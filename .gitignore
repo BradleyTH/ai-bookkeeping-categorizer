@@ -1,0 +1,44 @@
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# ── Environment & secrets ──────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# ── Virtual environments ───────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── IDE & editors ──────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ── Claude Code config ─────────────────────────────────────────────────────
+.claude/
+
+# ── Data files (uploaded/generated CSVs, sample data) ─────────────────────
+*.csv
+!sample_transactions.csv
+
+# ── Streamlit local config ─────────────────────────────────────────────────
+.streamlit/credentials.toml
+.streamlit/machine_id_v4
+
+# ── Logs ───────────────────────────────────────────────────────────────────
+*.log
