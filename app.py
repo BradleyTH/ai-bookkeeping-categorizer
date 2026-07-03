@@ -259,10 +259,14 @@ def map_columns_ui(df: pd.DataFrame) -> tuple:
 
 st.markdown("""
 <div class="app-header">
-    <h1>📊 AI-Assisted Bookkeeping Categorizer</h1>
+    <h1>AI-Assisted Bookkeeping Categorizer</h1>
     <div class="subtitle">
         Upload a bank CSV to automatically categorize transactions, view a trial balance, and generate a Profit &amp; Loss statement — powered by rules and AI.
     </div>
+    <p style="margin-top:0.5rem; font-size:0.9rem; color:#888;">
+        Your CSV needs at least a <strong>Date</strong>, <strong>Description</strong>, and <strong>Amount</strong> column
+        (or separate <strong>Debit</strong>/<strong>Credit</strong> columns). You'll map them to the correct fields after uploading.
+    </p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -275,7 +279,10 @@ with st.sidebar:
     st.markdown("<h3>Settings</h3>", unsafe_allow_html=True)
 
     use_ai = st.checkbox("Enable AI Categorization", value=not DEMO_MODE)
-    st.info(f"Demo Mode: {'ON' if DEMO_MODE else 'OFF'}")
+    if DEMO_MODE:
+        st.info("🔧 Demo Mode: AI uses mock responses. Set an API key or DEMO_MODE=false to use real AI.")
+    else:
+        st.success("✅ Live AI: Using real API for categorization.")
 
     st.markdown('</div>', unsafe_allow_html=True)
 

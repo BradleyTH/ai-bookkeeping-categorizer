@@ -46,9 +46,13 @@ else:
 OPENROUTER_MODEL = os.environ.get("OPENROUTER_MODEL", "openrouter/free")  # Default model (auto-routes to free)
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-# DEMO MODE: Set to True to use mock AI responses instead of real API calls
-# Set DEMO_MODE=False via environment variable to use real API
-DEMO_MODE = os.environ.get("DEMO_MODE", "true").lower() == "true"
+# DEMO MODE: Auto-detected — True when no API key is available, False when a key is set.
+# Override by setting DEMO_MODE=true or DEMO_MODE=false in the environment.
+_demo_override = os.environ.get("DEMO_MODE", "").strip().lower()
+if _demo_override:
+    DEMO_MODE = _demo_override == "true"
+else:
+    DEMO_MODE = not bool(OPENROUTER_API_KEY)
 
 # =============================================================================
 # CHART OF ACCOUNTS
