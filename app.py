@@ -102,7 +102,6 @@ st.markdown("""
     @media (prefers-color-scheme: light) {
         .sidebar-section h3 { color: #555555 !important; }
         .section-header { color: #111111 !important; }
-        .app-header h1 { color: #111111 !important; }
         .app-header .subtitle { color: #2d2d2d !important; }
         .stTabs [data-baseweb="tab"] { color: #111111 !important; }
         .footer { color: #555555 !important; }
@@ -112,7 +111,6 @@ st.markdown("""
     @media (prefers-color-scheme: dark) {
         .sidebar-section h3 { color: #bbbbbb !important; }
         .section-header { color: #ffffff !important; }
-        .app-header h1 { color: #ffffff !important; }
         .app-header .subtitle { color: #cccccc !important; }
         .stTabs [data-baseweb="tab"] { color: #cccccc !important; }
         .footer { color: #999999 !important; }
