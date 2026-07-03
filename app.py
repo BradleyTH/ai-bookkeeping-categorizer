@@ -41,7 +41,7 @@ st.markdown("""
         border-bottom: 1px solid var(--border-color, #d0d0d0);
         margin-bottom: 1.5rem;
     }
-    .app-header h1 { font-size: 2rem; font-weight: 700; margin: 0; padding: 0; }
+    .app-header h1 { font-size: 2rem; font-weight: 700; margin: 0; padding: 0; color: #555555 !important; }
     .app-header .subtitle { font-size: 1rem; margin-top: 0.25rem; }
 
     .section-header { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 0.75rem 0; }
